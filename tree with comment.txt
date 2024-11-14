@@ -1,0 +1,133 @@
+ecommerce-platform/
+├── public/
+│   ├── images/
+│   ├── favicon.ico
+│   └── robots.txt
+├── src/
+│   ├── components/
+│   │   ├── Auth/
+│   │   │   ├── LoginForm.js
+│   │   │   ├── LoginButton.js
+│   │   │   ├── LogoutButton.js
+│   │   │   └── RegisterForm.js
+│   │   ├── Cart/
+│   │   │   ├── CartItem.js
+│   │   │   └── CartSummary.js
+│   │   ├── Checkout/
+│   │   │   └── CheckoutForm.js
+│   │   ├── Common/
+│   │   │   ├── AdminHeader.js
+│   │   │   ├── UserHeader.js
+│   │   │   ├── Footer.js
+│   │   │   ├── Loader.js
+│   │   │   └── DropDown.js
+│   │   ├── Orders/
+│   │   │   └── OrderDetail.js
+│   │   ├── Products/
+│   │   │   ├── ProductCard.js
+│   │   │   ├── ProductDetail.js
+│   │   │   └── ProductFilter.js
+│   │   └── UserProfile/
+│   │       └── UserProfileForm.js
+│   └── data/
+│   │   ├── cartSampleData.js
+│   │   ├── categoriesSampleData.js
+│   │   ├── orderSampleData.js
+│   │   ├── paymentSampleData.js
+│   │   ├── productsSampleData.js
+│   │   ├── reviewSampleData.js
+│   │   ├── userSampleData.js
+│   │   └── wishlistSampleData.js
+│   └── fonts/
+│   │   ├── GeistMonoVF.woff
+│   │   └── GeistVF.woff
+│   └── hooks/
+│   │   ├── useAuth.js
+│   │   ├── useCart.js
+│   │   └── useProducts.js
+│   ├── layouts/
+│   │   ├── AdminLayout.js
+│   │   └── UserLayout.js
+│   ├── lib/
+│   │   ├── apiClient.js
+│   │   ├── mongoDB.js
+│   │   └── priceCalculator.js
+│   ├── middleware/
+│   │   └── authMiddleware.js
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Product.js
+│   │   ├── Cart.js
+│   │   └── Order.js
+│   ├── pages/
+│   │   ├── api/
+│   │   │   ├── auth/
+│   │   │   │   ├── login.js
+│   │   │   │   └── register.js
+│   │   │   ├── cart/
+│   │   │   │   ├── add.js
+│   │   │   │   └── remove.js
+│   │   │   ├── orders/
+│   │   │   │   ├── create.js
+│   │   │   │   └── history.js
+│   │   │   └── products/
+│   │   │       ├── index.js
+│   │   │       └── [id].js
+│   │   ├── auth/
+│   │   │   ├── login.js
+│   │   │   └── register.js
+│   │   ├── user/
+│   │   │   ├── index.js
+│   │   │   ├── orders/
+│   │   │   │   ├── index.js
+│   │   │   │   ├── [orderId].js
+│   │   │   │   └── cancel.js
+│   │   │   ├── profile/
+│   │   │   │   ├── index.js
+│   │   │   │   ├── update-password.js
+│   │   │   │   └── delete-account.js
+│   │   │   ├── wishlist/
+│   │   │   │   ├── index.js
+│   │   │   │   └── add-to-cart.js
+│   │   │   ├── cart/
+│   │   │   │   └── index.js
+│   │   │   ├── checkout/
+│   │   │   │   └── index.js
+│   │   │   ├── payment/
+│   │   │   │   └── index.js
+│   │   │   ├── _app.js
+│   │   │   └── _document.js
+│   │   ├── admin/
+│   │   │   ├── index.js
+│   │   │   ├── products/
+│   │   │   │   ├── index.js
+│   │   │   │   ├── [id].js
+│   │   │   │   ├── create.js
+│   │   │   ├── categories/
+│   │   │   │   ├── index.js
+│   │   │   │   └── create.js
+│   │   │   ├── orders/
+│   │   │   │   ├── index.js
+│   │   │   │   ├── [orderId].js
+│   │   │   │   ├── manage.js
+│   │   │   ├── users/
+│   │   │   │   ├── index.js
+│   │   │   │   ├── [userId].js
+│   │   │   │   └── create.js
+│   │   │   ├── settings/
+│   │   │   │   └── index.js
+│   │   └── index.js
+│   ├── styles/
+│   │   ├── globals.css
+│   │   ├── Home.module.css
+│   │   └── theme.css
+│   └── utils/
+│       ├── formatCurrency.js
+│       └── validateEmail.js
+├── .env
+├── .eslintrc.json
+├── .gitignore
+├── next.config.js
+├── package.json
+├── text.txt
+└── README.md

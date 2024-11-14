@@ -1,0 +1,163 @@
+Software Requirements Specification (SRS) Document
+E-Commerce Platform
+
+1. Introduction
+1.1 Purpose
+The purpose of this SRS document is to describe the requirements for an e-commerce platform that enables users to browse products, manage their shopping carts, place orders, and make payments. The platform will be used by three main user types: customers, administrators, and vendors.
+
+1.2 Scope
+The e-commerce platform will provide an online marketplace for users to buy and sell products. The platform will support user registration, product catalog management, secure payment processing, and order tracking. It will offer a responsive design to support both desktop and mobile users.
+
+1.3 Definitions, Acronyms, and Abbreviations
+SRS: Software Requirements Specification
+API: Application Programming Interface
+UI: User Interface
+UX: User Experience
+SKU: Stock Keeping Unit
+
+1.4 References
+ISO/IEC/IEEE 29148:2011 – Systems and software engineering – Life cycle processes – Requirements engineering
+
+2. System Overview
+The e-commerce platform will include the following high-level features:
+
+User Management: Registration, login, profile management.
+Product Management: Product listing, search, categorization.
+Shopping Cart: Add, update, and remove products.
+Order Management: Checkout, order tracking, order history.
+Payment Processing: Multiple payment options, secure transactions.
+Admin Dashboard: Product approval, user management, reporting.
+
+3. Functional Requirements
+
+3.1 User Management
+
+3.1.1 User Registration and Login
+Users can register with their email or social media accounts.
+Two-factor authentication (2FA) is required for added security.
+Users receive a confirmation email upon registration.
+
+3.1.2 Profile Management
+Users can update their personal information (name, address, phone number).
+Users can view their order history and manage saved payment methods.
+
+3.2 Product Management
+
+3.2.1 Product Catalog
+Vendors can create, edit, and delete product listings.
+Products include details like name, description, price, SKU, and images.
+
+3.2.2 Product Search and Filter
+Users can search products by name, category, brand, price, and rating.
+Advanced filters, such as “sort by price” and “best-selling,” are available.
+
+3.2.3 Product Recommendations
+The system suggests products based on user browsing and purchase history.
+Featured products are displayed on the homepage.
+
+3.3 Shopping Cart
+
+3.3.1 Cart Operations
+Users can add products to their cart.
+Users can adjust the quantity or remove items from the cart.
+Cart contents are saved across sessions.
+
+3.3.2 Price Calculation
+The system calculates the total price, including taxes and shipping fees.
+Discounts and promo codes can be applied at checkout.
+
+3.4 Order Management
+
+3.4.1 Checkout Process
+Users proceed to checkout from their cart.
+Users can select or add a shipping address.
+Payment options are provided, and users can choose their preferred method.
+
+3.4.2 Order Tracking
+Users receive a confirmation email with an order summary and tracking details.
+Users can track the delivery status of their orders on the platform.
+
+3.4.3 Order History
+Users can view past orders, including order details and status.
+
+3.5 Payment Processing
+
+3.5.1 Payment Options
+Multiple payment methods, including credit/debit cards, PayPal, and online wallets, are supported.
+Payment details are encrypted for security.
+
+3.5.2 Payment Confirmation
+Users receive payment confirmation via email.
+Payment status is reflected in the order history.
+
+3.6 Admin Dashboard
+
+3.6.1 User Management
+Admins can view and manage user accounts.
+Admins can approve or reject new vendor accounts.
+
+3.6.2 Product Moderation
+Admins can approve, edit, or delete product listings.
+Admins can manage categories and featured products.
+
+3.6.3 Reporting and Analytics
+Admins can view sales reports, user activity, and inventory statistics.
+Sales performance and user engagement data are visualized in charts and graphs.
+
+4. Non-Functional Requirements
+
+4.1 Performance Requirements
+The platform should handle at least 1000 concurrent users.
+Product search results should load within 3 seconds.
+
+4.2 Security Requirements
+All user data is encrypted, especially payment details.
+2FA is required for administrative access.
+Regular security audits and vulnerability scans are conducted.
+
+4.3 Usability Requirements
+The platform is responsive and optimized for mobile and desktop.
+UX best practices are applied for intuitive navigation and interaction.
+
+4.4 Reliability Requirements
+System uptime is targeted at 99.9%.
+Automated backups are performed daily.
+
+5. System Architecture
+
+5.1 Overview
+The platform follows a microservices architecture to facilitate scalability.
+Separate services are created for user management, product management, order processing, and payment.
+
+5.2 Technology Stack
+Frontend: React, Tailwind CSS
+Backend: Node.js, Express.js
+Database: PostgreSQL (for relational data), MongoDB (for product catalog)
+Authentication: OAuth 2.0, JWT for session management
+Payment Gateway: Stripe, PayPal API
+Deployment: Docker containers on AWS
+
+6. Data Flow Diagrams (DFD)
+
+6.1 Level 1 - User Interaction
+User requests data from the frontend.
+Frontend communicates with backend APIs for user, product, cart, and order operations.
+
+6.2 Level 2 - Product Catalog
+Vendors upload products, which are stored in the product service.
+Products are indexed for search functionality.
+
+6.3 Level 3 - Payment Processing
+User initiates payment; request goes to payment service.
+Payment service communicates with third-party gateways (e.g., Stripe).
+Confirmation sent to user and order service for status update.
+
+7. User Interface Mockups (Optional)
+
+8. Constraints
+The platform must comply with GDPR for user data protection.
+Payment transactions must adhere to PCI DSS standards.
+
+9. Assumptions and Dependencies
+Assumes the availability of a high-speed internet connection for optimal experience.
+Depends on third-party payment gateways for secure transactions.

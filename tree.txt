@@ -1,0 +1,138 @@
+ecommerce-platform
+
+This is a web app for learning purposes
+
+Techs: Next.js | React | Javascript | Tailwind CSS | MongoDB/Mongoose
+
+ecommerce-platform/
+├── public/                          # Public assets accessible by the frontend
+│   ├── images/                      # Images for products, icons, etc.
+│   ├── favicon.ico                  # Favicon
+│   └── robots.txt                   # Robots.txt file for SEO
+├── src/                             # Source directory for all app code
+│   ├── components/                  # Reusable UI components
+│   │   ├── Auth/                    # Authentication components
+│   │   │   ├── LoginForm.js         # Login form component
+│   │   │   ├── LoginButton.js       # Login button component
+│   │   │   ├── LogoutButton.js      # Logout button component
+│   │   │   └── RegisterForm.js      # Registration form component
+│   │   ├── Cart/                    # Cart components
+│   │   │   ├── CartItem.js          # Individual cart item component
+│   │   │   └── CartSummary.js       # Cart summary component
+│   │   ├── Checkout/                # Checkout components
+│   │   │   └── CheckoutForm.js      # Checkout form component
+│   │   ├── Common/                  # Shared components
+│   │   │   ├── AdminHeader.js       # Header for Admin
+│   │   │   ├── UserHeader.js        # Header for User
+│   │   │   ├── Footer.js            # Footer component
+│   │   │   ├── Loader.js            # Loading spinner or animation
+│   │   │   └── DropDown.js          # DropDown component
+│   │   ├── Orders/                  # Order components
+│   │   │   └── OrderDetail.js       # Single order detail component
+│   │   ├── Products/                # Product components
+│   │   │   ├── ProductCard.js       # Product card in listing
+│   │   │   ├── ProductDetail.js     # Product detail view
+│   │   │   └── ProductFilter.js     # Filters for product listing
+│   │   └── UserProfile/             # Profile management components
+│   │       └── UserProfileForm.js   # Profile update form component
+│   └── data/                        # Custom React hooks
+│   │   ├── cartSampleData.js        # Sample data for cart
+│   │   ├── categoriesSampleData.js  # Sample data for categories
+│   │   ├── orderSampleData.js       # Sample data for orders
+│   │   ├── paymentSampleData.js     # Sample data for payment
+│   │   ├── productsSampleData.js    # Sample data for products
+│   │   ├── reviewSampleData.js      # Sample data for reviews
+│   │   ├── userSampleData.js        # Sample data for users
+│   │   └── wishlistSampleData.js    # Sample data for wishlist
+│   └── fonts/                       # Custom React hooks for fonts
+│   │   ├── GeistMonoVF.woff         # Optimized font for Next.js
+│   │   └── GeistVF.woff             # Optimized font for Next.js
+│   └── hooks/                       # Custom React hooks
+│   │   ├── useAuth.js               # Hook for authentication state
+│   │   ├── useCart.js               # Hook for cart management
+│   │   └── useProducts.js           # Hook for fetching products
+│   ├── layouts/                     # Layouts for different pages
+│   │   ├── AdminLayout.js           # Main layout with header and footer (Admin)
+│   │   └── UserLayout.js            # Layout specific to user pages
+│   ├── lib/                         # Libraries and utility functions
+│   │   ├── apiClient.js             # API client for fetching data
+│   │   └── priceCalculator.js       # Utility for calculating prices
+│   ├── middleware/                  # Custom middleware
+│   │   └── authMiddleware.js        # Authentication middleware
+│   ├── models/                      # Database models for MongoDB
+│   │   ├── User.js                  # User schema/model
+│   │   ├── Product.js               # Product schema/model
+│   │   ├── Cart.js                  # Cart schema/model
+│   │   └── Order.js                 # Order schema/model
+│   ├── pages/                       # Next.js page router directories
+│   │   ├── api/                     # API routes
+│   │   │   ├── auth/                # Authentication API routes
+│   │   │   │   ├── login.js         # Login API endpoint
+│   │   │   │   └── register.js      # Register API endpoint
+│   │   │   ├── cart/                # Cart API routes
+│   │   │   │   ├── add.js           # Add item to cart
+│   │   │   │   └── remove.js        # Remove item from cart
+│   │   │   ├── orders/              # Order API routes
+│   │   │   │   ├── create.js        # Order creation endpoint
+│   │   │   │   └── history.js       # Fetch order history
+│   │   │   └── products/            # Product API routes
+│   │   │       ├── index.js         # Fetch product list
+│   │   │       └── [id].js          # Fetch product by ID
+│   │   ├── auth/                    # Authentication pages
+│   │   │   ├── login.js             # Login page
+│   │   │   └── register.js          # Registration page
+│   │   ├── user/                    # User dashboard routes
+│   │   │   ├── index.js             # User dashboard home page
+│   │   │   ├── orders/              # User's order management
+│   │   │   │   ├── index.js         # List of orders (User)
+│   │   │   │   ├── [orderId].js     # Order detail page (User)
+│   │   │   │   └── cancel.js        # Cancel an order (User)
+│   │   │   ├── profile/             # User profile management
+│   │   │   │   ├── index.js         # View and edit profile (User)
+│   │   │   │   ├── update-password.js # Update password (User)
+│   │   │   │   └── delete-account.js # Delete user account (User)
+│   │   │   ├── wishlist/            # User's wishlist
+│   │   │   │   ├── index.js         # View wishlist (User)
+│   │   │   │   └── add-to-cart.js   # Move item to cart (User)
+│   │   │   ├── cart/                # User shopping cart
+│   │   │   │   └── index.js         # View and manage cart (User)
+│   │   │   ├── checkout/            # User checkout flow
+│   │   │   │   └── index.js         # Checkout page (User)
+│   │   │   ├── payment/             # Payment methods page (User)
+│   │   │   │   └── index.js         # Manage payment methods (User)
+│   │   │   ├── _app.js              # Custom App component for global state (User)
+│   │   │   └── _document.js         # Custom Document for HTML structure (User)
+│   │   ├── admin/                   # Admin dashboard routes
+│   │   │   ├── index.js             # Admin dashboard home page
+│   │   │   ├── products/            # Product management routes
+│   │   │   │   ├── index.js         # List of products (Admin)
+│   │   │   │   ├── [id].js          # Edit product page (Admin)
+│   │   │   │   ├── create.js        # Create new product page (Admin)
+│   │   │   ├── categories/          # Product category management
+│   │   │   │   ├── index.js         # List of categories (Admin)
+│   │   │   │   └── create.js        # Create a new category (Admin)
+│   │   │   ├── orders/              # Order management routes
+│   │   │   │   ├── index.js         # List of orders (Admin)
+│   │   │   │   ├── [orderId].js     # Order detail page (Admin)
+│   │   │   │   ├── manage.js        # Manage an order (Admin)
+│   │   │   ├── users/               # User management routes
+│   │   │   │   ├── index.js         # List of users (Admin)
+│   │   │   │   ├── [userId].js      # View/Edit user (Admin)
+│   │   │   │   └── create.js        # Add new user (Admin)
+│   │   │   ├── settings/            # Admin settings
+│   │   │   │   └── index.js         # Settings page (Admin)
+│   │   └── index.js                 # Landing page
+│   ├── styles/                      # Global styles
+│   │   ├── globals.css              # Global CSS rules
+│   │   ├── Home.module.css          # Specific styles for home page
+│   │   └── theme.css                # Custom theme styles
+│   └── utils/                       # Utility functions
+│       ├── formatCurrency.js        # Format currency display
+│       └── validateEmail.js         # Email validation utility
+├── .env                             # Environment variables
+├── .eslintrc.json                   # ESLint configuration
+├── .gitignore                       # Git ignore file
+├── next.config.js                   # Next.js configuration
+├── package.json                     # Project dependencies and scripts
+├── text.txt                         # Project dependencies and scripts
+└── README.md                        # Project documentation
