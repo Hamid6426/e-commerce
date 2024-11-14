@@ -1,0 +1,111 @@
+Simple E-Commerce Platform (Learning Purpose)
+
+1. Introduction
+
+1.1 Purpose
+This document describes the requirements for a basic e-commerce platform to be built as a full-stack learning project. The platform will allow users to browse products, manage shopping carts, and simulate order placement. This simplified SRS guides the essential functionality, focusing on CRUD operations and basic user authentication.
+
+1.2 Scope
+The platform will include essential features for an online marketplace, such as user registration, product management, a shopping cart, and a simple checkout process with mock payment.
+
+2. System Overview
+The platform will include:
+
+User Management: Registration, login, profile management.
+Product Management: Product listing, search, categorization.
+Shopping Cart: Add, update, and remove products.
+Order Placement: Simple checkout with a mock payment simulation.
+
+3. Functional Requirements
+
+3.1 User Management
+
+3.1.1 User Registration and Login
+Users register with a unique email and password.
+Simple login functionality with basic session management.
+
+3.1.2 Profile Management
+Users can update personal information (name, address).
+Users can view order history.
+
+3.2 Product Management
+
+3.2.1 Product Catalog
+Admins can create, edit, and delete products.
+Products include basic details like name, description, price, and image URL.
+
+3.2.2 Product Search and Filter
+Users can search products by name and category.
+Basic filtering by category and price range.
+
+3.3 Shopping Cart
+
+3.3.1 Cart Operations
+Users can add products to the cart.
+Users can view, edit quantities, and remove items from the cart.
+
+3.3.2 Price Calculation
+The system calculates total price, including mock taxes.
+
+3.4 Order Management
+
+3.4.1 Simple Checkout
+Users proceed to checkout from the cart.
+Users select or add a shipping address.
+Simulated payment with a success/failure message.
+
+3.4.2 Order History
+Users can view past orders with order details and a “Order Completed” status.
+
+4. Non-Functional Requirements
+
+4.1 Performance Requirements
+Platform supports 50-100 concurrent users for learning purposes.
+Page load time should be within 3 seconds in a local environment.
+
+4.2 Security Requirements
+Basic password hashing for user data protection.
+Simple session management for login persistence.
+
+4.3 Usability Requirements
+Responsive layout optimized for desktop and mobile.
+Focus on intuitive navigation to improve learning.
+
+5. System Architecture
+
+5.1 Overview
+The system follows a monolithic structure for simplicity, with a client-server architecture:
+
+Frontend: React with basic styling (e.g., CSS or Tailwind CSS).
+Backend: Node.js, Express.js.
+Database: MongoDB for handling product, user, and order data.
+
+6. Assumptions and Dependencies
+Project is built in a local development environment.
+Dependencies include Node.js, Express.js, React, and MongoDB for basic full-stack operations.
+
+HERO PAGE
+
+[Header]
+- Logo | Main Navigation | Search Bar | Cart Icon
+
+[Hero Section]
+- Large promotional banner with CTA buttons
+
+[Featured Products/Collections]
+- Best Sellers | New Arrivals | Categories
+
+[Special Offers & Discounts]
+- Banner for sales or coupon codes
+
+[About Us Section]
+- Brief story about the brand or company
+
+[Customer Reviews]
+- Testimonial carousel or featured reviews
+
+[Newsletter Signup]
+- CTA for users to subscribe to receive discounts
+
+[Footer]
+- Quick Links | Social Media | Payment Icons | Shipping Info | Contact Us   
